@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | ISO Innovation Hub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b1020;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: #b5b5b5;
+            text-align: center;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            margin-bottom: 60px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #0f172a;
+        }
+
+        nav .logo img {
+            height: 50px;
+            width: auto;
+            position: relative;
+            left: 40px;
+            border-radius: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #00d4ff, #7a5cff);
+            padding: 12px 26px;
+            border-radius: 40px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+        }
+
+        /* ======================
+       HERO
+    ====================== */
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 120px;
+            background:
+                linear-gradient(rgba(11, 16, 32, 0.8), rgba(11, 16, 32, 0.9)),
+                url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') center/cover;
+        }
+
+        .hero-content h1 {
+            font-size: 68px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: #d0d0d0;
+            max-width: 750px;
+            line-height: 1.9;
+            margin: auto;
+        }
+
+        /* ======================
+       ABOUT
+    ====================== */
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .about-text h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: #b8b8b8;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        /* ======================
+       MISSION & VISION
+    ====================== */
+
+        .mv-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .mv-card {
+            background: #131b33;
+            padding: 40px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-8px);
+            border-color: #00d4ff;
+        }
+
+        .mv-card h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #00d4ff;
+        }
+
+        .mv-card p {
+            color: #b5b5b5;
+            line-height: 1.9;
+        }
+
+        /* ======================
+       PROGRAMS
+    ====================== */
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background: #131b33;
+            padding: 35px;
+            border-radius: 24px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .program-card h3 {
+            margin: 20px 0;
+        }
+
+        .program-card p {
+            color: #b7b7b7;
+            line-height: 1.8;
+        }
+
+        .icon {
+            font-size: 55px;
+        }
+
+        .icon img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            /*border-radius: 20px;
+            /*object-fit: cover;*/
+            border-radius: 10%;
+        }
+
+        /* ======================
+       STATS
+    ====================== */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .stat {
+            background: #131b33;
+            padding: 45px;
+            border-radius: 25px;
+        }
+
+        .stat h2 {
+            font-size: 50px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            color: #c4c4c4;
+        }
+
+        /* ======================
+       TEAM
+    ====================== */
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: #131b33;
+            border-radius: 25px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .team-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-card h3 {
+            margin-top: 20px;
+        }
+
+        .team-card p {
+            color: #b5b5b5;
+            margin-top: 10px;
+        }
+
+        /* ======================
+       CTA
+    ====================== */
+
+        .cta {
+            background: linear-gradient(135deg, #00d4ff, #7a5cff);
+            border-radius: 30px;
+            text-align: center;
+            padding: 80px 30px;
+        }
+
+        .cta h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.9;
+            margin-bottom: 35px;
+        }
+
+        .cta .btn {
+            background: white;
+            color: #111;
+        }
+
+        /* ======================
+       FOOTER
+    ====================== */
+
+        footer {
+            background: #070b16;
+            padding: 60px 8%;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 20px;
+        }
+
+        footer p,
+        footer a {
+            color: #b7b7b7;
+            line-height: 2;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+        }
+
+        /* ======================
+       RESPONSIVE
+    ====================== */
+
+        @media(max-width:992px) {
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+
+        @media(max-width:600px) {
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .about-text h2 {
+                font-size: 34px;
+            }
+
+            .cta h2 {
+                font-size: 34px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======================
+       NAVBAR
+  ======================= -->
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="media/logo.jpeg" alt="ISO Logo"></a>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html">Programs</a>
+            <a href="index.html">Gallery</a>
+            <a href="index.html">Workshops</a>
+            <a href="#">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="reg.html" class="btn">Join Now</a>
+    </nav>
+
+    <!-- ======================
+       HERO
+  ======================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>About ISO Innovation Hub</h1>
+
+            <p>
+                ISO Innovation Hub is a creative learning environment dedicated
+                to empowering students through technology, innovation, creativity,
+                and hands-on experiences that prepare them for the future.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+       ABOUT SECTION
+  ======================= -->
+
+    <section>
+
+        <div class="about-container">
+
+            <div class="about-image">
+                <img src="media/aboutus.jpeg" alt="After Hubs">
+            </div>
+
+            <div class="about-text">
+
+                <h2>Who We Are</h2>
+
+                <p>
+                    ISO Innovation Hub is a modern educational and creative center
+                    that provides engaging workshops and programs for students of
+                    different ages and interests.
+                </p>
+
+                <p>
+                    We combine technology, creativity, teamwork, and practical
+                    learning to help students discover their talents and develop
+                    future-ready skills in an inspiring environment.
+                </p>
+
+                <p>
+                    Our programs include coding, robotics, multimedia production,
+                    fashion design, sports activities, and manufacturing workshops
+                    designed to encourage innovation and creativity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+       MISSION & VISION
+  ======================= -->
+
+    <section>
+
+        <h2 class="section-title">Our Mission & Vision</h2>
+
+        <p class="section-subtitle">
+            Building a generation of innovators, creators, and future leaders.
+        </p>
+
+        <div class="mv-container">
+
+            <div class="mv-card">
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To provide students with high-quality educational experiences
+                    that develop creativity, innovation, teamwork, and technical
+                    skills through practical workshops and interactive learning.
+                </p>
+
+            </div>
+
+            <div class="mv-card">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    To become a leading innovation hub that inspires young minds
+                    and prepares students to succeed in the rapidly changing world
+                    through creativity, technology, and future skills.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+       PROGRAMS
+  ======================= -->
+
+    <!-- =======================
+       PROGRAMS
+  ======================== -->
+
+    <section id="prog">
+
+        <h2 class="section-title">Our Programs</h2>
+
+        <p class="section-subtitle">
+            Discover a variety of workshops and creative learning experiences
+            designed for students and future innovators.
+        </p>
+
+        <div class="program-grid">
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/robo2.jpeg" alt="Coding & Robotics Icon">
+                </div>
+                <h3>Coding & Robotics</h3>
+                <p>Learn programming, app development, AI, and web technologies.</p>
+            </div>
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/multimedia1.jpeg" alt="Multimedia Icon">
+                </div>
+                <h3>Multimedia</h3>
+                <p>Create videos, graphics, animations, and digital content.</p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/fashion.jpeg" alt="Fashion Icon">
+                </div>
+                <h3>Fashion</h3>
+                <p>Explore creativity through fashion design and styling workshops.</p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/sports1.jpeg" alt="Sports Icon">
+                </div>
+                <h3>Sports</h3>
+                <p>Develop teamwork, discipline, and physical skills through activities.</p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/man2.jfif" alt="manufacturer Icon">
+                </div>
+                <h3>Manufacturing</h3>
+                <p>Learn practical production and maker skills using modern tools.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================
+       STATS
+  ======================= -->
+
+    <section>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Students</p>
+            </div>
+
+            <div class="stat">
+                <h2>30+</h2>
+                <p>Workshops</p>
+            </div>
+
+            <div class="stat">
+                <h2>15+</h2>
+                <p>School Partners</p>
+            </div>
+
+            <div class="stat">
+                <h2>10+</h2>
+                <p>Programs</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+       TEAM
+  ======================= -->
+
+    <section>
+
+        <h2 class="section-title">Meet Our Team</h2>
+
+        <p class="section-subtitle">
+            Passionate instructors and mentors dedicated to empowering students.
+        </p>
+
+        <div class="team-grid">
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="">
+                <h3>Ahmed Hassan</h3>
+                <p>Technology Instructor</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="">
+                <h3>Sara Ali</h3>
+                <p>Creative Media Mentor</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d" alt="">
+                <h3>Mohamed Kareem</h3>
+                <p>Robotics Coach</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+       CTA
+  ======================= -->
+
+    <section>
+
+        <div class="cta">
+
+            <h2>Join ISO Innovation Hub</h2>
+
+            <p>
+                Start your journey with us and explore creativity,
+                innovation, and future-ready skills through exciting
+                workshops and hands-on learning experiences.
+            </p>
+
+            <a href="reg.html" class="btn">Register Now</a>
+
+        </div>
+
+    </section>
+
+    <!-- ======================
+       FOOTER
+  ======================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <h3>ISO Innovation Hub</h3>
+                <p>
+                    Empowering students through creativity,
+                    innovation, and technology.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a><br>
+                <a href="about.html">About</a><br>
+                <a href="#prog">Programs</a><br>
+                <a href="reg.html">Register</a>
+            </div>
+
+            <div id="contact">
+                <h3>Contact</h3>
+                <p>Email: info@iso.com</p>
+                <p>Phone: +20 000 000 000</p>
+                <p>Egypt</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 ISO Innovation Hub. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

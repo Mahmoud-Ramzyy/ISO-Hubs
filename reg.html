@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO Innovation Hub</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/logo.jpeg">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #131b34;
+        }
+
+        /* ===== Navbar ===== */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 30px;
+            background-color: #0f172a;
+        }
+
+        nav .logo img {
+            height: 55px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        .nav-links a,
+        .btn {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: 500;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #00d4ff, #7a5cff);
+            padding: 12px 24px;
+            border-radius: 40px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ===== Auth Container ===== */
+
+        .auth-container {
+
+            width: 420px;
+            background: white;
+            margin: 50px auto;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .auth-container h2 {
+            margin-bottom: 20px;
+            color: #131b34;
+        }
+
+        /* ===== Tabs ===== */
+
+        .tab-buttons {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .tab-buttons button {
+
+            flex: 1;
+            padding: 12px;
+            cursor: pointer;
+            border: none;
+            background: #e2e8f0;
+            font-weight: 600;
+            transition: 0.3s;
+
+        }
+
+        .tab-buttons button:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .tab-buttons button:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .tab-buttons button.active {
+
+            background: #131b34;
+            color: white;
+
+        }
+
+        .tab-content {
+            display: none;
+            flex-direction: column;
+        }
+
+        .tab-content.active {
+            display: flex;
+        }
+
+        /* ===== Inputs ===== */
+
+        input,
+        select {
+
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-size: 14px;
+            width: 100%;
+
+        }
+
+        input:focus,
+        select:focus {
+
+            outline: none;
+            border-color: #7a5cff;
+
+        }
+
+        small {
+
+            color: #666;
+            margin-bottom: 10px;
+
+        }
+
+        /* ===== Buttons ===== */
+
+        .submit-btn {
+
+            padding: 13px;
+            background: linear-gradient(135deg, #00d4ff, #7a5cff);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+
+        }
+
+        .submit-btn:hover {
+
+            transform: translateY(-2px);
+
+        }
+
+        /* ===== Responsive ===== */
+
+        @media(max-width:500px) {
+
+            .auth-container {
+
+                width: 90%;
+
+            }
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== Navbar ===== -->
+
+    <nav>
+
+        <div class="logo">
+
+            <a href="index.html">
+                <img src="media/logo.jpeg" alt="ISO Logo">
+            </a>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="index.html#prog">Programs</a>
+            <a href="index.html#projects">Gallery</a>
+            <a href="index.html">Workshops</a>
+            <a href="#">About</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <a href="reg.html" class="btn">Join Now</a>
+
+    </nav>
+
+    <!-- ===== Auth Section ===== -->
+
+    <div class="auth-container">
+
+        <!-- Tabs -->
+
+        <div class="tab-buttons">
+
+            <button class="tab-btn active" onclick="showTab('sign-in')">
+
+                Sign In
+
+            </button>
+
+            <button class="tab-btn" onclick="showTab('sign-up')">
+
+                Sign Up
+
+            </button>
+
+        </div>
+
+        <!-- =========================
+             SIGN IN
+        ========================== -->
+
+        <div id="sign-in" class="tab-content active">
+
+            <h2>Student / School Sign In</h2>
+
+            <input id="signinEmail" type="email" placeholder="Email Address">
+
+            <input id="signinPassword" type="password" placeholder="Password">
+
+            <button class="submit-btn" onclick="signIn()">
+
+                Sign In
+
+            </button>
+
+        </div>
+
+        <!-- =========================
+             SIGN UP
+        ========================== -->
+
+        <div id="sign-up" class="tab-content">
+
+            <h2>Create Account</h2>
+
+            <!-- Account Type -->
+
+            <select id="accountType" onchange="toggleSchoolCode()">
+
+                <option value="student">
+
+                    Student Account
+
+                </option>
+
+                <option value="school">
+
+                    School Account
+
+                </option>
+
+            </select>
+
+            <!-- Name -->
+
+            <input id="signupName" placeholder="Full Name / School Name">
+
+            <!-- Email -->
+
+            <input id="signupEmail" type="email" placeholder="Email Address">
+
+            <!-- Password -->
+
+            <input id="signupPassword" type="password" placeholder="Password">
+
+            <!-- School Code -->
+
+            <div id="schoolCodeContainer">
+
+                <input id="signupSchoolCode" placeholder="School Code">
+
+                <small>
+
+                    Students must enter a valid school code
+                    provided by their school.
+
+                </small>
+
+            </div>
+
+            <button class="submit-btn" onclick="signUp()">
+
+                Create Account
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+localStorage.removeItem("isAdmin");
+        // =========================
+        // TAB SWITCHING
+        // =========================
+
+        function showTab(tabId) {
+
+            document
+                .querySelectorAll('.tab-content')
+                .forEach(tab =>
+                    tab.classList.remove('active')
+                );
+
+            document
+                .querySelectorAll('.tab-btn')
+                .forEach(btn =>
+                    btn.classList.remove('active')
+                );
+
+            document
+                .getElementById(tabId)
+                .classList.add('active');
+
+            document
+                .querySelector(
+                    `.tab-btn[onclick="showTab('${tabId}')"]`
+                )
+                .classList.add('active');
+
+        }
+
+        // =========================
+        // SHOW / HIDE SCHOOL CODE
+        // =========================
+
+        function toggleSchoolCode() {
+
+            const type =
+                document.getElementById('accountType').value;
+
+            const schoolCodeContainer =
+                document.getElementById('schoolCodeContainer');
+
+            // Hide school code for school accounts
+
+            if (type === "school") {
+
+                schoolCodeContainer.style.display = "none";
+
+            }
+
+            // Show school code for students
+
+            else {
+
+                schoolCodeContainer.style.display = "block";
+
+            }
+
+        }
+
+        // =========================
+        // SIGN IN
+        // =========================
+        /*
+                function signIn(){
+        
+                    const email =
+                        document.getElementById('signinEmail').value;
+        
+                    const password =
+                        document.getElementById('signinPassword').value;
+        
+                    if(email === "" || password === ""){
+        
+                        alert("Please fill all fields");
+        
+                        return;
+        
+                    }
+        
+                    alert(
+        `Successfully Signed In!
+        
+        Email: ${email}`
+                    );
+        
+                }
+        */
+        function signIn() {
+
+            const email =
+                document.getElementById('signinEmail').value;
+
+            const password =
+                document.getElementById('signinPassword').value;
+
+            // =========================
+            // ADMIN LOGIN
+            // =========================
+
+            if (email === "admin" &&
+                password === "admin") {
+
+                // Save admin session
+
+                localStorage.setItem("isAdmin", "true");
+
+                alert("Admin Login Successful");
+
+                // Go to homepage
+
+                window.location.href = "index.html";
+
+                return;
+            }
+
+            // =========================
+            // NORMAL LOGIN
+            // =========================
+
+            if (email === "" || password === "") {
+
+                alert("Please fill all fields");
+
+                return;
+            }
+
+            alert(
+                `Successfully Signed In!
+
+Email: ${email}`
+            );
+
+        }
+        // =========================
+        // SIGN UP
+        // =========================
+
+        function signUp() {
+
+            const type =
+                document.getElementById('accountType').value;
+
+            const name =
+                document.getElementById('signupName').value;
+
+            const email =
+                document.getElementById('signupEmail').value;
+
+            const password =
+                document.getElementById('signupPassword').value;
+
+            const schoolCode =
+                document.getElementById('signupSchoolCode').value;
+
+            // Validation
+
+            if (name === "" ||
+                email === "" ||
+                password === "") {
+
+                alert("Please fill all fields");
+
+                return;
+
+            }
+
+            // =========================
+            // SCHOOL ACCOUNT
+            // =========================
+
+            if (type === "school") {
+
+                // Generate School Code
+
+                const generatedCode =
+                    "ISO-" +
+                    Math.floor(1000 + Math.random() * 9000);
+
+                alert(
+                    `School Account Created Successfully!
+
+School Name: ${name}
+
+School Email: ${email}
+
+Generated School Code:
+${generatedCode}
+
+Share this code with your students.`
+                );
+
+            }
+
+            // =========================
+            // STUDENT ACCOUNT
+            // =========================
+
+            else {
+
+                if (schoolCode.trim() === "") {
+
+                    alert(
+                        "Please enter a valid school code"
+                    );
+
+                    return;
+
+                }
+
+                alert(
+                    `Student Account Created Successfully!
+
+Student Name: ${name}
+
+Email: ${email}
+
+Connected School Code:
+${schoolCode}`
+                );
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

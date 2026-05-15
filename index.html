@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISO Innovation Hub</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="media/logo.jpeg ">
+    <link rel="stylesheet" href="anotherstyle.css">
+</head>
+
+<body>
+    <!-- ADMIN PANEL BUTTON -->
+
+    <button id="adminEditBtn"  style="display:none;" onclick="enableEditMode()">
+
+        Admin Edit Mode
+
+    </button>
+
+    <!-- =======================
+       NAVBAR
+  ======================== -->
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="media/logo.jpeg" alt="ISO Logo"></a>
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#prog">Programs</a>
+            <a href="#projects">Gallery</a>
+            <a href="#workshops">Workshops</a>
+            <a href="aboutus.html">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="reg.html" class="btn">Join Now</a>
+    </nav>
+
+    <!-- =======================
+       HERO
+  ======================== -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1 id="heroTitle">Build Skills for the Future</h1>
+
+            <p id="heroText">
+                ISO Innovation Hub provides hands-on workshops in coding,
+                robotics, multimedia, fashion, sports, and manufacturing
+                to empower the next generation of creators and innovators.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#prog" class="btn">Explore Programs</a>
+                <a href="#workshops" class="btn secondary-btn">View Workshops</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+        </div>
+
+    </section>
+
+    <!-- =======================
+       PROGRAMS
+  ======================== -->
+
+    <section id="prog">
+
+        <h2 class="section-title">Our Programs</h2>
+
+        <p class="section-subtitle">
+            Discover a variety of workshops and creative learning experiences
+            designed for students and future innovators.
+        </p>
+
+        <div class="program-grid">
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/robo2.jpeg" alt="Coding & Robotics Icon">
+                </div>
+                <h3>Coding & Robotics</h3>
+                <p>Learn programming, app development, AI, and web technologies.</p>
+            </div>
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/multimedia1.jpeg" alt="Multimedia Icon">
+                </div>
+                <h3>Multimedia</h3>
+                <p>Create videos, graphics, animations, and digital content.</p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/fashion.jpeg" alt="Fashion Icon">
+                </div>
+                <h3>Fashion</h3>
+                <p>Explore creativity through fashion design and styling workshops.</p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/sports1.jpeg" alt="Sports Icon">
+                </div>
+                <h3>Sports</h3>
+                <p>Develop teamwork, discipline, and physical skills through activities.</p>
+            </div>
+
+            <div class="program-card">
+                <div class="icon">
+                    <img src="media/man2.jfif" alt="manufacturer Icon">
+                </div>
+                <h3>Manufacturing</h3>
+                <p>Learn practical production and maker skills using modern tools.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =======================
+       PROJECTS
+  ======================== -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Student Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <img src="media/pro3.jpg" width="200" height="300" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="media/spor.jpg" width="200" height="300" alt="">
+            </div>
+            <div class="project-card">
+                <img src="media/med.jpg" width="200" height="300" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="media/pro2.jpg" width="200" height="300" alt="">
+            </div>
+
+            <div class="project-card">
+                <img src="media/pro.jfif" width="200" height="300" alt="">
+            </div>
+            <div class="project-card">
+                <img src="media/fas.jpg" width="200" height="300" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =======================
+       EVENTS
+  ======================== -->
+
+    <section id="workshops">
+
+        <h2 class="section-title">Upcoming Workshops</h2>
+
+        <div class="event-grid">
+
+            <div class="event-card">
+                <span id="Workdate">June 2026</span>
+                <h3 id="Worktitle">AI & Coding Camp</h3>
+                <p id="worktext">Learn Python, AI tools, and app development basics.</p>
+                <a href="reg.html" class="btn">Register</a>
+            </div>
+
+            <div class="event-card">
+                <span id="Workdate1">July 2026</span>
+                <h3 id="Worktitle1">Robotics Challenge</h3>
+                <p id="worktext1">Build and program robots in a team competition.</p>
+                <a href="reg.html" class="btn">Register</a>
+            </div>
+
+            <div class="event-card">
+                <span id="Workdate2">August 2026</span>
+                <h3 id="Worktitle2">Media Production Bootcamp</h3>
+                <p id="worktext2">Master video editing, design, and storytelling skills.</p>
+                <a href="reg.html" class="btn">Register</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =======================
+       WHY CHOOSE US
+  ======================== -->
+
+    <section>
+
+        <h2 class="section-title">Why Choose ISO</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h4>Modern Labs</h4>
+                <p>Advanced spaces for creativity and innovation.</p>
+            </div>
+
+            <div class="feature">
+                <h4>Expert Trainers</h4>
+                <p>Professional instructors and mentors.</p>
+            </div>
+
+            <div class="feature">
+                <h4>Project-Based Learning</h4>
+                <p>Students learn through real projects and teamwork.</p>
+            </div>
+
+            <div class="feature">
+                <h4>Future Skills</h4>
+                <p>Preparing students for tomorrow’s careers.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =======================
+       STATS
+  ======================== -->
+
+    <section>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Students</p>
+            </div>
+
+            <div class="stat">
+                <h2>30+</h2>
+                <p>Workshops</p>
+            </div>
+
+            <div class="stat">
+                <h2>15+</h2>
+                <p>School Partners</p>
+            </div>
+
+            <div class="stat">
+                <h2>10+</h2>
+                <p>Programs</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =======================
+       TESTIMONIALS
+  ======================== -->
+
+    <section>
+
+        <h2 class="section-title">Testimonials</h2>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+                <p>
+                    “ISO helped me discover my passion for robotics and programming.”
+                </p>
+                <h4>- Student</h4>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    “Professional workshops with amazing trainers and environment.”
+                </p>
+                <h4>- Parent</h4>
+            </div>
+
+            <div class="testimonial">
+                <p>
+                    “One of the best innovation hubs for developing future skills.”
+                </p>
+                <h4>- School Partner</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =======================
+       CTA
+  ======================== -->
+
+    <section>
+
+        <div class="cta">
+
+            <h2>Ready to Start Your Journey?</h2>
+
+            <p>
+                Join ISO Innovation Hub and explore creativity,
+                technology, teamwork, and innovation.
+            </p>
+
+            <a href="reg.html" class="btn">Join Now</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =======================
+       FOOTER
+  ======================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <h3>ISO Innovation Hub</h3>
+                <p>
+                    Empowering students through creativity,
+                    technology, and future-ready skills.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#">Home</a><br>
+                <a href="#prog">Programs</a><br>
+                <a href="aboutus.html">About</a><br>
+                <!--<a href="#">Contact</a>*/ -->
+            </div>
+
+            <div id="contact">
+                <h3>Contact</h3>
+                <p>Email: info@iso.com</p>
+                <p>Phone: +20 000 000 000</p>
+                <p>Egypt</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 ISO Innovation Hub. All Rights Reserved.
+        </div>
+
+    </footer>
+    <script>
+
+        // =========================
+        // CHECK ADMIN
+        // =========================
+
+        const isAdmin =
+            localStorage.getItem("isAdmin");
+
+        // Show admin button
+
+        if (isAdmin === "true") {
+
+            document
+                .getElementById("adminEditBtn")
+                .style.display = "block";
+
+        }
+
+        // =========================
+        // ENABLE EDIT MODE
+        // =========================
+
+        function enableEditMode() {
+
+            // Editable Elements
+
+            const editableElements = [
+
+                "heroTitle",
+                "heroText",
+                "Worktitle", "worktext", "workdate",
+                "Worktitle1", "worktext1", "workdate1",
+                "Worktitle2", "worktext2", "workdate2"
+            ];
+
+            editableElements.forEach(id => {
+
+                const element =
+                    document.getElementById(id);
+
+                element.contentEditable = true;
+
+                element.style.border =
+                    "2px dashed #00d4ff";
+
+                element.style.padding = "10px";
+
+            });
+
+            alert(
+                `Edit Mode Enabled
+
+You can now edit the text directly on the page.`
+            );
+
+        }
+
+        // =========================
+        // SAVE CONTENT
+        // =========================
+
+        window.addEventListener("beforeunload", () => {
+
+            localStorage.setItem(
+                "heroTitle",
+                document.getElementById("heroTitle").innerHTML
+            );
+
+            localStorage.setItem(
+                "heroText",
+                document.getElementById("heroText").innerHTML
+            );
+            localStorage.setItem(
+                "worktext",
+                document.getElementById("worktext").innerHTML
+            );
+        });
+
+        // =========================
+        // LOAD SAVED CONTENT
+        // =========================
+
+        window.onload = () => {
+
+            if (localStorage.getItem("heroTitle")) {
+
+                document.getElementById("heroTitle").innerHTML =
+                    localStorage.getItem("heroTitle");
+
+            }
+
+            if (localStorage.getItem("heroText")) {
+
+                document.getElementById("heroText").innerHTML =
+                    localStorage.getItem("heroText");
+
+            }
+
+            if (localStorage.getItem("Worktitle")) {
+
+                document.getElementById("heroText").innerHTML =
+                    localStorage.getItem("heroText");
+
+            }
+            if (localStorage.getItem("Worktitle")) {
+
+                document.getElementById("Worktitle").innerHTML =
+                    localStorage.getItem("Worktitle");
+
+            }
+            if (localStorage.getItem("worktext")) {
+
+                document.getElementById("workText").innerHTML =
+                    localStorage.getItem("worktext");
+
+            }
+
+            if (localStorage.getItem("workdate1")) {
+
+                document.getElementById("workdate1").innerHTML =
+                    localStorage.getItem("workdate1");
+
+            }
+            if (localStorage.getItem("Worktitle1")) {
+
+                document.getElementById("Worktitle1").innerHTML =
+                    localStorage.getItem("Worktitle1");
+
+            }
+            if (localStorage.getItem("worktext1")) {
+
+                document.getElementById("workText1").innerHTML =
+                    localStorage.getItem("worktext1");
+
+            }
+
+            if (localStorage.getItem("workdate1")) {
+
+                document.getElementById("workdate1").innerHTML =
+                    localStorage.getItem("workdate1");
+
+            }
+            if (localStorage.getItem("Worktitle2")) {
+
+                document.getElementById("Worktitle2").innerHTML =
+                    localStorage.getItem("Worktitle2");
+
+            }
+            if (localStorage.getItem("worktext2")) {
+
+                document.getElementById("workText2").innerHTML =
+                    localStorage.getItem("worktext2");
+
+            }
+
+            if (localStorage.getItem("workdate2")) {
+
+                document.getElementById("workdate2").innerHTML =
+                    localStorage.getItem("workdate2");
+
+            }
+        };
+
+    </script>
+</body>
+
+</html>
